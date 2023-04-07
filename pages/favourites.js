@@ -30,14 +30,14 @@ export default function Favourites(){
                     ))
                 ) : (
                     <Card>
-                    <Card.Body>
-                    <Card.Title><h4>Nothing Here </h4></Card.Title>
-                        <Card.Text>
-                        Try adding some new artwork to the list.
-                        </Card.Text>
-                      
-                    </Card.Body>
-                  </Card>
+                        <Card.Body>
+                            <Card.Title><h4>Nothing Here </h4></Card.Title>
+                                <Card.Text>
+                                Try adding some new artwork to the list.
+                                </Card.Text>
+                                
+                            </Card.Body>
+                    </Card>
                 )}
                 </Row>
                 <br />

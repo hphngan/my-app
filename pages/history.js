@@ -59,7 +59,6 @@ export default function History() {
 else {
   return(
       <>
-          
           <Card>
           <Card.Body>
                   <Card.Title><h4>Nothing Here </h4></Card.Title>
@@ -69,7 +68,6 @@ else {
                     
                   </Card.Body>
           </Card>
-          
       </>
   )
 }
