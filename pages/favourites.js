@@ -17,32 +17,34 @@ export default function Favourites(){
 
     if(!favouritesList) return null;
      
-    else 
+    else if (favouritesList.length > 0)
     {
         return (
             <>
                 <Row className="gy-4">
-                {favouritesList.length > 0 ? (
-                    favouritesList.map((currentObjectID) => (
+                {favouritesList.map((currentObjectID) => (
                         <Col lg={3} key={currentObjectID}>
                         <ArtworkCard objectID={currentObjectID} />
                         </Col>
-                    ))
-                ) : (
-                    <Card>
-                        <Card.Body>
-                            <Card.Title><h4>Nothing Here </h4></Card.Title>
-                                <Card.Text>
-                                Try adding some new artwork to the list.
-                                </Card.Text>
-                                
-                            </Card.Body>
-                    </Card>
-                )}
+                    ))}
                 </Row>
-                <br />
-                
             </>
         )
     }
+    else {
+        return(
+            <>
+                <Card>
+                    <Card.Body>
+                        <Card.Title><h4>Nothing Here </h4></Card.Title>
+                            <Card.Text>
+                                Try adding some new artwork to the list.
+                            </Card.Text>
+                                  
+                    </Card.Body>
+                </Card>
+            </>
+        )
+  }
+                  
 }
