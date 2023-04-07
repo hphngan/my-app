@@ -36,7 +36,7 @@ export default function History() {
 
   if(!parsedHistory) return null;
 
-  else {
+  else if (parsedHistory.length > 0){
     return(
         <>
             <ListGroup>
@@ -55,6 +55,23 @@ export default function History() {
         </ListGroup>
         </>
     )
+}
+else {
+  return(
+      <>
+          
+          <Card>
+          <Card.Body>
+                  <Card.Title><h4>Nothing Here </h4></Card.Title>
+                      <Card.Text>
+                      Try searching for some artwork.
+                      </Card.Text>
+                    
+                  </Card.Body>
+          </Card>
+          
+      </>
+  )
 }
 
 }
