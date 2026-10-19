@@ -20,7 +20,7 @@ export default function Artwork()
     const [page, setPage] = useState(1)
     const router = useRouter();
     let finalQuery = router.asPath.split('?')[1];
-    let url = `https://collectionapi.metmuseum.org/public/collection/v1/search?${finalQuery}`
+    let url = `https://collectionapi.metmuseum.org/public/collection/v1.1/search?${finalQuery}`
 
     const { data, error } = useSWR(url, fetcher);
 
